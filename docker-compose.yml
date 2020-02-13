@@ -1,0 +1,13 @@
+version: '3'
+services:
+    wa-jupyter:
+        build: .
+        image: wa-jupyter
+        restart: always
+        container_name: wa-jupyter
+        ports:
+            - '8888:8888'
+        environment: 
+            - JUPYTER_ENABLE_LAB=yes
+        volumes:
+            - './volumes/notebooks:/home/jovyan/work'
