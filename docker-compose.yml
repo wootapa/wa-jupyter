@@ -11,3 +11,4 @@ services:
             - JUPYTER_ENABLE_LAB=yes
         volumes:
             - './volumes/notebooks:/home/jovyan/work'
+            - './volumes/data:/home/jovyan/data'

@@ -4,6 +4,7 @@ RUN conda install -q -y \
     rasterio \
     gdal \
     fiona \
+    earthpy \
     jupyter_contrib_nbextensions \
     jupyter_nbextensions_configurator
 
