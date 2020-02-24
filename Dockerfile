@@ -5,10 +5,15 @@ RUN conda install -q -y \
     gdal \
     fiona \
     earthpy \
+    descartes \
+    mapclassify \
+    geopandas \
+    geoplot \
+    cartopy \
     jupyter_contrib_nbextensions \
     jupyter_nbextensions_configurator
 
 RUN jupyter contrib nbextension install --user && \
     jupyter nbextensions_configurator enable --user
 
-CMD ["jupyter", "notebook", "--no-browser","--NotebookApp.token=''","--NotebookApp.password=''"]
+CMD ["jupyter", "notebook", "--allow-root", "--ip='0.0.0.0'", "--no-browser","--NotebookApp.token=''","--NotebookApp.password=''"]
